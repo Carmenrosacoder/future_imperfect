@@ -1,0 +1,40 @@
+doctype html
+html
+    head
+        tittle
+        link(href='Problema/assets/css/bootstrap.min.css', rel='stylesheet')
+        link(href='Problema/assets/css/main.css' , rel='stylesheet')
+    - var texto = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."    
+    body
+        header
+            // Fixed navbar
+            .navbar.navbar-default.navbar-fixed-top(role='navegacion')
+              .container
+                .navbar-header
+                  button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                  a.navbar-brand(href='#') Project name
+                .navbar-collapse.collapse
+                  ul.nav.navbar-nav.navbar-right
+                    li
+                      a(href='../navbar/') Default
+                    li
+                      a(href='../navbar-static-top/') Static top
+                    li.active
+                      a(href='./') Fixed top
+        .container
+            h1 FUTURE IMPERFECT
+            p ANOTHER FINE RESPONSIVE SITE TEMPLATE BY HTML5 UP
+        
+            .row
+                .col-lg-9
+                    h1 MAGNA SED ADISPISCING
+                    p= texto
+                .col-lg-3
+                    p
+            
+        
+    
