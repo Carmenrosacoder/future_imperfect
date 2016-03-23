@@ -4,7 +4,41 @@ html
         tittle
         link(href='Problema/assets/css/bootstrap.min.css', rel='stylesheet')
         link(href='Problema/assets/css/main.css' , rel='stylesheet')
-    - var texto = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."    
+        link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', rel='stylesheet')
+    - var texto = "Lorem ipsum dolor sit amet, consectetur adipisicing elit."    
+    - var frase="Lorem ipsum dolor sit amet, consectetur adipisicing elitLorem ipsum dolor sit amet ,Lorem ipsum dolor sit amet, consectetur adipisicing elitLorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet, consectetur adipisicing elitLorem ipsum dolor sit amet, consectetur adipisicing elit" 
+    
+    mixin list
+      ul
+        li GENERAL
+        li 
+            i(class='fa fa-heart') 28
+        li 
+            i(class='fa fa-comment') 128
+    mixin articl( title , src)
+                .row
+                    .col-lg-9
+                        h1= title
+                        p= texto
+                    .col-lg-3
+                        span NOVEMBER 1,2015
+                        p JANE DOE
+                        img(src='Problema/images/avatar.jpg' class='img-circle')
+                section(id='img')
+                    img(src=src)
+                    p= frase
+                .row
+                    .col-lg-9
+                        a(href='#' class='btn') CONTINUE READING
+                    .col-lg-3
+                        +list
+    mixin imags(h1 , srca ,fecha)
+                .row
+                    .col-lg-6
+                        img(src=srca)
+                        section
+                            h1= h1
+                            fecha= fecha
     body
         header
             // Fixed navbar
@@ -16,38 +50,36 @@ html
                     span.icon-bar
                     span.icon-bar
                     span.icon-bar
-                  a.navbar-brand(href='#') Project name
+                  a.navbar-brand(href='#') FUTURE IMPERFECT
                 .navbar-collapse.collapse
-                  ul.nav.navbar-nav.navbar-right
-                    li
-                      a(href='../navbar/') Default
-                    li
-                      a(href='../navbar-static-top/') Static top
+                  ul.nav.navbar-nav.navbar-left
                     li.active
-                      a(href='./') Fixed top
+                      a(href='#') HOME
+                    li
+                      a(href='#') ABOUT US
+                    li
+                      a(href='./') SERVICES
+                    li
+                        a(href='./') GALLERYS
         .container
-          section(id='tittle')
-            img(src='Problema/images/logo.jpg')
-            h1 FUTURE IMPERFECT
-            p ANOTHER FINE RESPONSIVE SITE TEMPLATE BY HTML5 UP
-          section(id='article' )
-            .row
-              .col-lg-9
-                h1 MAGNA SED ADISPISCING
-                p= texto
-              .col-lg-3
-                span NOVEMBER 1,2015
-                p JANE DOE
-                img(src='Problema/images/avatar.jpg' class='img-circle')
+            section(id='tittle')
+                img(src='Problema/images/logo.jpg')
+                h1 FUTURE IMPERFECT
+                p ANOTHER FINE RESPONSIVE SITE TEMPLATE BY HTML5 UP
+            section(id='article' )
+                +articl('MAGNA SED ADISPISCING' , src="Problema/images/pic01.jpg")
+            section(id='article' )
+                +articl('ULTRICIES SED MAGNA EUISMOD ENIM VITAE GRAVIDA' , src="Problema/images/pic02.jpg")
+            section(id='article' )
+                +articl('EUISMOD ET ACCUMSAN' , src="Problema/images/pic03.jpg")         
+                
             section
-              img(src='Problema/images/pic01.jpg')
-              p= texto
-              .row
-                .col-lg-9
-                  a(href='#' class='btn') CONTINUE READING
-                .col-lg-3
-                  span NOVEMBER 1,2015
-                  p JANE DOE
-                  img(src='Problema/images/avatar.jpg' class='img-circle')  
+                .row
+                    .col-lg-6
+                        a(href='#' class='btn') CONTINUE READING
+                    .col-lg-6
+                        a(href='#' class='btn') CONTINUE READING
+            section 
+                +imgs('VITAE SED COMENDITUM' , srca="Problema/images/pic04.jpg" , fecha='29 october 2010')
         
     
